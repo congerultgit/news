@@ -10,6 +10,7 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'runtimePath'=>dirname(dirname(__DIR__)).'\runtime',
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
@@ -34,7 +35,7 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'index/error',
         ],
         /*
         'urlManager' => [

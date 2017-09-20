@@ -60,14 +60,14 @@ abstract class ErrorHandler extends Component
         ini_set('display_errors', false);
         set_exception_handler([$this, 'handleException']);
         if (defined('HHVM_VERSION')) {
-            set_error_handler([$this, 'handleHhvmError']);
+            //set_error_handler([$this, 'handleHhvmError']);
         } else {
-            set_error_handler([$this, 'handleError']);
+            //set_error_handler([$this, 'handleError']);
         }
         if ($this->memoryReserveSize > 0) {
             $this->_memoryReserve = str_repeat('x', $this->memoryReserveSize);
         }
-        register_shutdown_function([$this, 'handleFatalError']);
+        //register_shutdown_function([$this, 'handleFatalError']);
     }
 
     /**

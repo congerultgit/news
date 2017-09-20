@@ -1,0 +1,364 @@
+2017-09-20 11:04:57 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.ffun_ssq' doesn't exist' in H:\webtest\news\vendor\yiisoft\yii2\db\Command.php:915
+Stack trace:
+#0 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(915): PDOStatement->execute()
+#1 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 H:\webtest\news\frontend\controllers\IndexController.php(54): yii\db\Command->queryAll()
+#3 [internal function]: frontend\controllers\IndexController->actionTest()
+#4 H:\webtest\news\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 H:\webtest\news\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 H:\webtest\news\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('test', Array)
+#7 H:\webtest\news\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('index/test', Array)
+#8 H:\webtest\news\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 H:\webtest\news\frontend\web\index.php(20): yii\base\Application->run()
+#10 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.ffun_ssq' doesn't exist
+The SQL being executed was: SELECT * FROM ffun_ssq limit 1' in H:\webtest\news\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(930): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM f...')
+#1 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 H:\webtest\news\frontend\controllers\IndexController.php(54): yii\db\Command->queryAll()
+#3 [internal function]: frontend\controllers\IndexController->actionTest()
+#4 H:\webtest\news\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 H:\webtest\news\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 H:\webtest\news\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('test', Array)
+#7 H:\webtest\news\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('index/test', Array)
+#8 H:\webtest\news\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 H:\webtest\news\frontend\web\index.php(20): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'test.ffun_ssq' doesn't exist
+)
+
+2017-09-20 11:04:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/test'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'icbla9og65qasijt7bkucc4nc3'
+    '_csrf-frontend' => '3555cb9ee7e9577db20afe4632f2f0e4821a859b47188fe26829464ed0bd2625a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"½“/XUè\\Nã	A^Òês~yN\"¶ÃfŒõ#
+:\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'H:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'H:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.news.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=icbla9og65qasijt7bkucc4nc3; _csrf-frontend=3555cb9ee7e9577db20afe4632f2f0e4821a859b47188fe26829464ed0bd2625a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%BD%7F%93%2F%1DXU%E8%8D%5CN%E3%09A%18%5E%D2%EAs%7EyN%22%B6%C3f%12%8C%F5%23%0A%3A%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;H:\\Program Files\\TortoiseGit\\bin;H:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft Network Monitor 3\\;h:\\cmdgit\\cmd;H:\\mingw\\bin;H:\\python\\python27;C:\\Users\\1\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/1.0.1e PHP/5.5.1 Server at www.news.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/1.0.1e PHP/5.5.1'
+    'SERVER_NAME' => 'www.news.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'H:/webtest/news/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'H:/webtest/news/frontend/web'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'H:/webtest/news/frontend/web/index.php'
+    'REMOTE_PORT' => '62973'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/test'
+    'REQUEST_URI' => '/index.php?r=index/test'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1505876697.914
+    'REQUEST_TIME' => 1505876697
+]
+2017-09-20 11:06:22 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.ffun_ssq' doesn't exist' in H:\webtest\news\vendor\yiisoft\yii2\db\Command.php:915
+Stack trace:
+#0 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(915): PDOStatement->execute()
+#1 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 H:\webtest\news\frontend\controllers\IndexController.php(54): yii\db\Command->queryAll()
+#3 [internal function]: frontend\controllers\IndexController->actionTest()
+#4 H:\webtest\news\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 H:\webtest\news\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 H:\webtest\news\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('test', Array)
+#7 H:\webtest\news\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('index/test', Array)
+#8 H:\webtest\news\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 H:\webtest\news\frontend\web\index.php(20): yii\base\Application->run()
+#10 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.ffun_ssq' doesn't exist
+The SQL being executed was: SELECT * FROM ffun_ssq limit 1' in H:\webtest\news\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(930): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM f...')
+#1 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 H:\webtest\news\frontend\controllers\IndexController.php(54): yii\db\Command->queryAll()
+#3 [internal function]: frontend\controllers\IndexController->actionTest()
+#4 H:\webtest\news\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 H:\webtest\news\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 H:\webtest\news\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('test', Array)
+#7 H:\webtest\news\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('index/test', Array)
+#8 H:\webtest\news\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 H:\webtest\news\frontend\web\index.php(20): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'test.ffun_ssq' doesn't exist
+)
+
+2017-09-20 11:06:22 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/test'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'icbla9og65qasijt7bkucc4nc3'
+    '_csrf-frontend' => '3555cb9ee7e9577db20afe4632f2f0e4821a859b47188fe26829464ed0bd2625a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"½“/XUè\\Nã	A^Òês~yN\"¶ÃfŒõ#
+:\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'H:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'H:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.news.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=icbla9og65qasijt7bkucc4nc3; _csrf-frontend=3555cb9ee7e9577db20afe4632f2f0e4821a859b47188fe26829464ed0bd2625a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%BD%7F%93%2F%1DXU%E8%8D%5CN%E3%09A%18%5E%D2%EAs%7EyN%22%B6%C3f%12%8C%F5%23%0A%3A%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;H:\\Program Files\\TortoiseGit\\bin;H:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft Network Monitor 3\\;h:\\cmdgit\\cmd;H:\\mingw\\bin;H:\\python\\python27;C:\\Users\\1\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/1.0.1e PHP/5.5.1 Server at www.news.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/1.0.1e PHP/5.5.1'
+    'SERVER_NAME' => 'www.news.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'H:/webtest/news/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'H:/webtest/news/frontend/web'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'H:/webtest/news/frontend/web/index.php'
+    'REMOTE_PORT' => '63187'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/test'
+    'REQUEST_URI' => '/index.php?r=index/test'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1505876782.794
+    'REQUEST_TIME' => 1505876782
+]
+2017-09-20 11:06:46 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.ffun_ssq' doesn't exist' in H:\webtest\news\vendor\yiisoft\yii2\db\Command.php:915
+Stack trace:
+#0 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(915): PDOStatement->execute()
+#1 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 H:\webtest\news\frontend\controllers\IndexController.php(54): yii\db\Command->queryAll()
+#3 [internal function]: frontend\controllers\IndexController->actionTest()
+#4 H:\webtest\news\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 H:\webtest\news\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 H:\webtest\news\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('test', Array)
+#7 H:\webtest\news\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('index/test', Array)
+#8 H:\webtest\news\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 H:\webtest\news\frontend\web\index.php(20): yii\base\Application->run()
+#10 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.ffun_ssq' doesn't exist
+The SQL being executed was: SELECT * FROM ffun_ssq limit 1' in H:\webtest\news\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(930): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM f...')
+#1 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 H:\webtest\news\frontend\controllers\IndexController.php(54): yii\db\Command->queryAll()
+#3 [internal function]: frontend\controllers\IndexController->actionTest()
+#4 H:\webtest\news\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 H:\webtest\news\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 H:\webtest\news\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('test', Array)
+#7 H:\webtest\news\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('index/test', Array)
+#8 H:\webtest\news\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 H:\webtest\news\frontend\web\index.php(20): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'test.ffun_ssq' doesn't exist
+)
+
+2017-09-20 11:06:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/test'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'icbla9og65qasijt7bkucc4nc3'
+    '_csrf-frontend' => '3555cb9ee7e9577db20afe4632f2f0e4821a859b47188fe26829464ed0bd2625a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"½“/XUè\\Nã	A^Òês~yN\"¶ÃfŒõ#
+:\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'H:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'H:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.news.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=icbla9og65qasijt7bkucc4nc3; _csrf-frontend=3555cb9ee7e9577db20afe4632f2f0e4821a859b47188fe26829464ed0bd2625a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%BD%7F%93%2F%1DXU%E8%8D%5CN%E3%09A%18%5E%D2%EAs%7EyN%22%B6%C3f%12%8C%F5%23%0A%3A%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;H:\\Program Files\\TortoiseGit\\bin;H:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft Network Monitor 3\\;h:\\cmdgit\\cmd;H:\\mingw\\bin;H:\\python\\python27;C:\\Users\\1\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/1.0.1e PHP/5.5.1 Server at www.news.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/1.0.1e PHP/5.5.1'
+    'SERVER_NAME' => 'www.news.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'H:/webtest/news/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'H:/webtest/news/frontend/web'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'H:/webtest/news/frontend/web/index.php'
+    'REMOTE_PORT' => '63232'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/test'
+    'REQUEST_URI' => '/index.php?r=index/test'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1505876806.155
+    'REQUEST_TIME' => 1505876806
+]
+2017-09-20 11:08:13 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.ffun_ssq' doesn't exist' in H:\webtest\news\vendor\yiisoft\yii2\db\Command.php:915
+Stack trace:
+#0 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(915): PDOStatement->execute()
+#1 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 H:\webtest\news\frontend\controllers\IndexController.php(54): yii\db\Command->queryAll()
+#3 [internal function]: frontend\controllers\IndexController->actionTest()
+#4 H:\webtest\news\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 H:\webtest\news\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 H:\webtest\news\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('test', Array)
+#7 H:\webtest\news\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('index/test', Array)
+#8 H:\webtest\news\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 H:\webtest\news\frontend\web\index.php(20): yii\base\Application->run()
+#10 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.ffun_ssq' doesn't exist
+The SQL being executed was: SELECT * FROM ffun_ssq limit 1' in H:\webtest\news\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(930): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM f...')
+#1 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 H:\webtest\news\frontend\controllers\IndexController.php(54): yii\db\Command->queryAll()
+#3 [internal function]: frontend\controllers\IndexController->actionTest()
+#4 H:\webtest\news\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 H:\webtest\news\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 H:\webtest\news\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('test', Array)
+#7 H:\webtest\news\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('index/test', Array)
+#8 H:\webtest\news\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 H:\webtest\news\frontend\web\index.php(20): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'test.ffun_ssq' doesn't exist
+)
+
+2017-09-20 11:08:13 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/test'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'icbla9og65qasijt7bkucc4nc3'
+    '_csrf-frontend' => '3555cb9ee7e9577db20afe4632f2f0e4821a859b47188fe26829464ed0bd2625a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"½“/XUè\\Nã	A^Òês~yN\"¶ÃfŒõ#
+:\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'H:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'H:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.news.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=icbla9og65qasijt7bkucc4nc3; _csrf-frontend=3555cb9ee7e9577db20afe4632f2f0e4821a859b47188fe26829464ed0bd2625a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%BD%7F%93%2F%1DXU%E8%8D%5CN%E3%09A%18%5E%D2%EAs%7EyN%22%B6%C3f%12%8C%F5%23%0A%3A%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;H:\\Program Files\\TortoiseGit\\bin;H:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft Network Monitor 3\\;h:\\cmdgit\\cmd;H:\\mingw\\bin;H:\\python\\python27;C:\\Users\\1\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/1.0.1e PHP/5.5.1 Server at www.news.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/1.0.1e PHP/5.5.1'
+    'SERVER_NAME' => 'www.news.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'H:/webtest/news/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'H:/webtest/news/frontend/web'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'H:/webtest/news/frontend/web/index.php'
+    'REMOTE_PORT' => '63411'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/test'
+    'REQUEST_URI' => '/index.php?r=index/test'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1505876893.277
+    'REQUEST_TIME' => 1505876893
+]
