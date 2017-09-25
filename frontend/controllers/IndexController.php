@@ -26,17 +26,17 @@ class IndexController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
+                'only' => ['test'],
                 'rules' => [
                     [
-                        'actions' => ['signup'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'actions' => ['logout'],
+                        'actions' => ['test'],
                         'allow' => true,
                         'roles' => ['@'],
+                    ],
+                    [
+                        'actions' => ['error'],
+                        'allow' => true,
+                        'roles' => ['?'],
                     ],
                 ],
             ],
@@ -47,6 +47,19 @@ class IndexController extends Controller
                 ],
             ],
         ];
+    }
+
+    /**
+     * 这是一个测试的内容
+     * @Author   lx
+     * @DateTime 2017-09-22
+     * @return   [type]     [description]
+     */
+    public function actonIndex()
+    {
+        echo '暂无内容';
+        exit;
+
     }
 
 
