@@ -53,6 +53,11 @@ class SiteController extends Controller
         ];
     }
 
+    public function actionErrosshow(){
+        echo 123;
+        exit;
+    }
+
     /**
      * Displays homepage.
      *
