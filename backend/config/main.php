@@ -10,8 +10,11 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
+    'runtimePath'=>dirname(dirname(__DIR__)).'\runtime',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'gii' =>['class' => 'yii\gii\Module'],
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',

@@ -7,9 +7,9 @@ return [
         ],
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=test',
-            'username' => 'root',
-            'password' => '',
+            'dsn' => 'mysql:host=59.110.49.162;dbname=funs',
+            'username' => 'iboxlucky',
+            'password' => '123456',
             'charset' => 'utf8',
     	],
     ]

@@ -1,49 +1,30 @@
-2017-09-22 17:16:45 [127.0.0.1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'createPost' for key 'PRIMARY'' in H:\webtest\news\vendor\yiisoft\yii2\db\Command.php:842
+2017-09-27 16:02:38 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory does not exist: H:/webtest/news/frontend/web/admin/assets' in H:\webtest\news\vendor\yiisoft\yii2\web\AssetManager.php:213
 Stack trace:
-#0 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
-#1 H:\webtest\news\vendor\yiisoft\yii2\rbac\DbManager.php(276): yii\db\Command->execute()
-#2 H:\webtest\news\vendor\yiisoft\yii2\rbac\BaseManager.php(128): yii\rbac\DbManager->addItem(Object(yii\rbac\Permission))
-#3 H:\webtest\news\frontend\controllers\TestController.php(111): yii\rbac\BaseManager->add(Object(yii\rbac\Permission))
-#4 [internal function]: frontend\controllers\TestController->actionRbac()
-#5 H:\webtest\news\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#6 H:\webtest\news\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#7 H:\webtest\news\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('rbac', Array)
-#8 H:\webtest\news\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('test/rbac', Array)
-#9 H:\webtest\news\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#10 H:\webtest\news\frontend\web\index.php(20): yii\base\Application->run()
-#11 {main}
-
-Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'createPost' for key 'PRIMARY'
-The SQL being executed was: INSERT INTO `auth_item` (`name`, `type`, `description`, `rule_name`, `data`, `created_at`, `updated_at`) VALUES ('createPost', 2, 'Create a post', NULL, NULL, 1506071805, 1506071805)' in H:\webtest\news\vendor\yiisoft\yii2\db\Schema.php:636
-Stack trace:
-#0 H:\webtest\news\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `au...')
-#1 H:\webtest\news\vendor\yiisoft\yii2\rbac\DbManager.php(276): yii\db\Command->execute()
-#2 H:\webtest\news\vendor\yiisoft\yii2\rbac\BaseManager.php(128): yii\rbac\DbManager->addItem(Object(yii\rbac\Permission))
-#3 H:\webtest\news\frontend\controllers\TestController.php(111): yii\rbac\BaseManager->add(Object(yii\rbac\Permission))
-#4 [internal function]: frontend\controllers\TestController->actionRbac()
-#5 H:\webtest\news\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#6 H:\webtest\news\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#7 H:\webtest\news\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('rbac', Array)
-#8 H:\webtest\news\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('test/rbac', Array)
-#9 H:\webtest\news\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#10 H:\webtest\news\frontend\web\index.php(20): yii\base\Application->run()
-#11 {main}
-Additional Information:
-Array
-(
-    [0] => 23000
-    [1] => 1062
-    [2] => Duplicate entry 'createPost' for key 'PRIMARY'
-)
-
-2017-09-22 17:16:45 [127.0.0.1][-][-][info][application] $_GET = [
-    'r' => 'test/rbac'
+#0 H:\webtest\news\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 H:\webtest\news\vendor\yiisoft\yii2\di\Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#3 H:\webtest\news\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\web\AssetMa...', Array, Array)
+#4 H:\webtest\news\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\web\AssetMa...', Array, Array)
+#5 H:\webtest\news\vendor\yiisoft\yii2\di\ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#6 H:\webtest\news\vendor\yiisoft\yii2\di\ServiceLocator.php(73): yii\di\ServiceLocator->get('assetManager')
+#7 H:\webtest\news\vendor\yiisoft\yii2-gii\Module.php(134): yii\di\ServiceLocator->__get('assetManager')
+#8 H:\webtest\news\vendor\yiisoft\yii2-gii\Module.php(123): yii\gii\Module->resetGlobalSettings()
+#9 H:\webtest\news\vendor\yiisoft\yii2\base\Controller.php(144): yii\gii\Module->beforeAction(Object(yii\base\InlineAction))
+#10 H:\webtest\news\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#11 H:\webtest\news\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('gii', Array)
+#12 H:\webtest\news\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 H:\webtest\news\backend\web\index.php(17): yii\base\Application->run()
+#14 H:\webtest\news\frontend\web\admin\index.php(12): include_once('H:\webtest\news...')
+#15 {main}
+2017-09-27 16:02:38 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'gii'
 ]
 
 $_COOKIE = [
-    '_csrf-frontend' => '3555cb9ee7e9577db20afe4632f2f0e4821a859b47188fe26829464ed0bd2625a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"½“/XUè\\Nã	A^Òês~yN\"¶ÃfŒõ#
-:\";}'
-    'advanced-frontend' => '8mvvd8ckurc6ogjp699ienl087'
+    'advanced-frontend' => '1k7us5ipku87vae08m67p2o873'
+    '_csrf-frontend' => '5e6f229546895abf26e609866d6f6044b16f690b6716e54e4ddb4e24bc14fce8a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"ÀL}yp¸­eªf{øV:²§O¤’5*B¦ÉoÄnÝ\";}'
+    'advanced-backend' => 'ee121eulsto8bg10rugqh0kcc7'
+    '_identity-frontend' => '23412136aee46e630a6fa963aafea6fb1d76e013fc5d8c0bb6071c9e4b24dbdea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[2,\"wYFyDZAdzyN1k9c6SZmH16vpINqWd5n5\",2592000]\";}'
 ]
 
 $_SERVER = [
@@ -55,15 +36,13 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'www.news.com'
     'HTTP_CONNECTION' => 'keep-alive'
-    'HTTP_PRAGMA' => 'no-cache'
-    'HTTP_CACHE_CONTROL' => 'no-cache'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
-    'HTTP_COOKIE' => '_csrf-frontend=3555cb9ee7e9577db20afe4632f2f0e4821a859b47188fe26829464ed0bd2625a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%BD%7F%93%2F%1DXU%E8%8D%5CN%E3%09A%18%5E%D2%EAs%7EyN%22%B6%C3f%12%8C%F5%23%0A%3A%22%3B%7D; advanced-frontend=8mvvd8ckurc6ogjp699ienl087'
-    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;H:\\Program Files\\TortoiseGit\\bin;H:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft Network Monitor 3\\;h:\\cmdgit\\cmd;H:\\mingw\\bin;H:\\python\\python27;C:\\Users\\1\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'HTTP_COOKIE' => 'advanced-frontend=1k7us5ipku87vae08m67p2o873; _csrf-frontend=5e6f229546895abf26e609866d6f6044b16f690b6716e54e4ddb4e24bc14fce8a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%C0L%7Dyp%B8%ADe%AAf%7B%14%F8V%3A%B2%06%A7O%18%A4%925%2AB%A6%9D%C9o%C4n%DD%22%3B%7D; advanced-backend=ee121eulsto8bg10rugqh0kcc7; _identity-frontend=23412136aee46e630a6fa963aafea6fb1d76e013fc5d8c0bb6071c9e4b24dbdea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22wYFyDZAdzyN1k9c6SZmH16vpINqWd5n5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;H:\\Program Files\\TortoiseGit\\bin;H:\\xampp\\php;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft Network Monitor 3\\;h:\\cmdgit\\cmd;H:\\mingw\\bin;H:\\python\\python27;h:\\composer;C:\\Users\\1\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\1\\AppData\\Roaming\\Composer\\vendor\\bin'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
@@ -80,15 +59,15 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'H:/webtest/news/frontend/web'
     'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
-    'SCRIPT_FILENAME' => 'H:/webtest/news/frontend/web/index.php'
-    'REMOTE_PORT' => '59172'
+    'SCRIPT_FILENAME' => 'H:/webtest/news/frontend/web/admin/index.php'
+    'REMOTE_PORT' => '63373'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
-    'QUERY_STRING' => 'r=test/rbac'
-    'REQUEST_URI' => '/index.php?r=test/rbac'
-    'SCRIPT_NAME' => '/index.php'
-    'PHP_SELF' => '/index.php'
-    'REQUEST_TIME_FLOAT' => 1506071805.77
-    'REQUEST_TIME' => 1506071805
+    'QUERY_STRING' => 'r=gii'
+    'REQUEST_URI' => '/admin/index.php?r=gii'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1506499358.63
+    'REQUEST_TIME' => 1506499358
 ]
