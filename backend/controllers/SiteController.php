@@ -100,4 +100,10 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
+
+    public function actionTest(){
+        $posts = Yii::$app->db->createCommand('SELECT * FROM fun_ssq limit 1')->queryAll();
+        var_dump($posts);
+        exit;
+    }
 }
