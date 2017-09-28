@@ -55,7 +55,7 @@ class IndexController extends Controller
      * @DateTime 2017-09-22
      * @return   [type]     [description]
      */
-    public function actonIndex()
+    public function actionIndex()
     {
         echo '暂无内容';
         exit;
