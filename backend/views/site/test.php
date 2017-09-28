@@ -7,6 +7,5 @@
 
 use yii\helpers\Html;
 
-$this->title = $name;
 ?>
 this is a test page
