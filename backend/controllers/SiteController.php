@@ -54,7 +54,7 @@ class SiteController extends Controller
         ];
     }
 
-    public function actionErrosshow(){
+    public function actionErrorshow(){
         echo 123;
         exit;
     }
