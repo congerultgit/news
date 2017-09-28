@@ -6,6 +6,13 @@ use yii\console\Controller;
 
 class RbacController extends Controller
 {
+    public function actionTest(){
+	echo 123;
+        $posts = Yii::$app->db->createCommand('SELECT * FROM fun_ssq limit 1')->queryAll();
+        var_dump($posts);
+	exit;
+    }
+
     public function actionInit()
     {
         $auth = Yii::$app->authManager;

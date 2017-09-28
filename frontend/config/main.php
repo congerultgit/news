@@ -10,7 +10,7 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'runtimePath'=>dirname(dirname(__DIR__)).'\runtime',
+    'runtimePath'=>dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR .'runtime',
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [

@@ -1,9 +1,9 @@
 <?php
-//error_reporting(E_ERROR | E_WARNING | E_PARSE);
-//error_reporting(0);
-
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+//error_reporting(E_ALL);
+ini_set('display_errors', 'on');
 //defined('YII_DEBUG') or define('YII_DEBUG', true);
-defined('YII_DEBUG') or define('YII_DEBUG', false);
+defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
 
 require(__DIR__ . '/../../vendor/autoload.php');
