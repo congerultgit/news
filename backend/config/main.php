@@ -10,7 +10,7 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
-    'runtimePath'=>dirname(dirname(__DIR__)).'\runtime',
+    'runtimePath'=>dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR.'runtime',
     'bootstrap' => ['log'],
     'modules' => [
         'gii' =>['class' => 'yii\gii\Module'],
