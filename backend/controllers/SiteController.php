@@ -105,6 +105,7 @@ class SiteController extends Controller
     public function actionTest(){
         $posts = Yii::$app->db->createCommand('SELECT * FROM fun_ssq limit 1')->queryAll();
         var_dump($posts);
+        var_dump(123321);
         exit;
         return $this->render('test');
     }
