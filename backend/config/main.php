@@ -25,18 +25,17 @@ return [
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
-            'site/*',
+            //'site/*',
             'admin/*',
         ]
-    ],    
+    ],  
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
         'user' => [
-            'identityClass' => 'common\models\User',
-            'enableAutoLogin' => true,
-            'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
+            'identityClass' => 'mdm\admin\models\User',
+            'loginUrl' => ['admin/user/login'],
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
@@ -66,6 +65,7 @@ return [
             "class" => 'yii\rbac\DbManager',
             "defaultRoles" => ["guest"],
         ]
+
     ],
     'params' => $params,
 ];

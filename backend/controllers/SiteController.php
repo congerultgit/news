@@ -55,7 +55,7 @@ class SiteController extends Controller
     }
 
     public function actionErrorshow(){
-        echo 123;
+        echo 'something error,need log';
         exit;
     }
 
@@ -108,5 +108,10 @@ class SiteController extends Controller
         var_dump(123321);
         exit;
         return $this->render('test');
+    }
+
+    public function actionTest2(){
+        echo 'test2';
+        exit;
     }
 }
