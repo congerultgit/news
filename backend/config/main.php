@@ -12,9 +12,23 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'runtimePath'=>dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR.'runtime',
     'bootstrap' => ['log'],
+    'aliases' => [
+        '@mdm/admin' => '@extensions/yii2-admin',
+    ],
     'modules' => [
         'gii' =>['class' => 'yii\gii\Module'],
+        'admin' => [
+            'class' => 'mdm\admin\Module',
+            'layout' => 'left-menu'
+        ]
     ],
+    'as access' => [
+        'class' => 'mdm\admin\components\AccessControl',
+        'allowActions' => [
+            'site/*',
+            'admin/*',
+        ]
+    ],    
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
@@ -48,6 +62,10 @@ return [
             ],
         ],
         */
+        "authManager" => [
+            "class" => 'yii\rbac\DbManager',
+            "defaultRoles" => ["guest"],
+        ]
     ],
     'params' => $params,
 ];
