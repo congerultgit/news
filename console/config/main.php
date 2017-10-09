@@ -27,5 +27,8 @@ return [
             ],
         ],
     ],
+    'aliases' => [
+        '@mdm/admin' => '@extensions/yii2-admin',
+    ],
     'params' => $params,
 ];
