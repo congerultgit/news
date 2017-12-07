@@ -37,14 +37,12 @@ return [
         'errorHandler' => [
             'errorAction' => 'index/error',
         ],
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
         ],
