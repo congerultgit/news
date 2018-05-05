@@ -18,36 +18,6 @@ use frontend\models\ContactForm;
  */
 class IndexController extends Controller
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['test'],
-                'rules' => [
-                    [
-                        'actions' => ['test'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                    [
-                        'actions' => ['error'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * 这是一个测试的内容
@@ -63,9 +33,10 @@ class IndexController extends Controller
     }
 
 
-    public function actionTest(){
-        $posts = Yii::$app->db->createCommand('SELECT * FROM fun_ssq limit 1')->queryAll();
-        var_dump($posts);
+    public function actionTesta(){
+        echo 123;exit;
+        //$posts = Yii::$app->db->createCommand('SELECT * FROM fun_ssq limit 1')->queryAll();
+        //var_dump($posts);
         exit;
     }
 
@@ -79,10 +50,17 @@ class IndexController extends Controller
     {
         //var_dump(Yii::getLogger()->messages[0]);
         //Yii::error('abcdef');
-        echo 'something error';
+        echo 'aaa  something error  test';
         exit;
     }
 
+
+    public function actionGit(){
+
+        $git = 'test test git success';
+        echo $git;
+        exit;
+    }
 
   
 }
