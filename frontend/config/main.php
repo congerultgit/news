@@ -9,9 +9,17 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log','gii'],
     'runtimePath'=>dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR .'runtime',
     'controllerNamespace' => 'frontend\controllers',
+    'defaultRoute'=>'index',
+    'modules' => [
+        'gii' =>['class' => 'yii\gii\Module'],
+        'admin' => [
+            'class' => 'mdm\admin\Module',
+            'layout' => 'left-menu'
+        ]
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',

@@ -19,6 +19,39 @@ use frontend\models\ContactForm;
 class IndexController extends Controller
 {
 
+
+
+     /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                //'only' => ['logout', 'signup'],代表生效的控制器
+                'rules' => [
+                    [
+                        'actions' => ['index','list','error','testnologin'],
+                        'allow' => true,
+                        'roles' => ['?','@'],//所有用户
+                    ],
+                    [
+                        'actions' => ['testlogin'],
+                        'allow' => true,
+                        'roles' => ['@'],//认证用户
+                    ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
+            ],
+        ];
+    }   
+
     /**
      * 这是一个测试的内容
      * @Author   lx
@@ -27,17 +60,30 @@ class IndexController extends Controller
      */
     public function actionIndex()
     {
-        echo '暂无内容';
+        $this->getview()->title = '这是首页';
+        return $this->render('index');
+
+    }
+
+
+    public function acntionList(){
+        echo 'this is list';
         exit;
 
     }
 
 
-    public function actionTesta(){
-        echo 123;exit;
-        //$posts = Yii::$app->db->createCommand('SELECT * FROM fun_ssq limit 1')->queryAll();
-        //var_dump($posts);
+    public function actionTestlogin(){
+        //echo 123;exit;
+        $posts = Yii::$app->db->createCommand('SELECT * FROM fun_ssq limit 1')->queryAll();
+        var_dump($posts);
         exit;
+    }
+
+    public function actionTestnologin(){
+        echo 'no loginin';
+        exit;
+
     }
 
     /**
@@ -50,15 +96,7 @@ class IndexController extends Controller
     {
         //var_dump(Yii::getLogger()->messages[0]);
         //Yii::error('abcdef');
-        echo 'aaa  something error  test';
-        exit;
-    }
-
-
-    public function actionGit(){
-
-        $git = 'test test git success';
-        echo $git;
+        echo 'something may by error';
         exit;
     }
 
